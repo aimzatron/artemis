@@ -15,9 +15,8 @@ class DiaryEntriesController < ApplicationController
   def edit
   end
 
-  def create(uuid)
+  def create
     @diary_entry = DiaryEntry.new(diary_entry_params)
-    @diary_entry.uuid = uuid
 
     respond_to do |format|
       if @diary_entry.save
