@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users
+
   root to: "diary_entries#index"
 
   resources :diary_entries

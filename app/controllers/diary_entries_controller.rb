@@ -15,8 +15,10 @@ class DiaryEntriesController < ApplicationController
   def edit
   end
 
-  def create
+  def create(uuid)
     @diary_entry = DiaryEntry.new(diary_entry_params)
+    @diary_entry.uuid = uuid
+
     respond_to do |format|
       if @diary_entry.save
         format.html { redirect_to @diary_entry, notice: 'Diary entry was successfully created.' }
