@@ -2,14 +2,11 @@ class DiaryEntriesController < ApplicationController
   before_action :set_diary_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    uuid = params[:uuid]
-    if uuid.present?
-      render :json => @diary_entry
-    end
+    @diary_entry = DiaryEntry.all
+    render :json => @diary_entry
   end
 
   def show
-    puts "show hit"
   end
 
   def new

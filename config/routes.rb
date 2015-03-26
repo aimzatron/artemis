@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resources :diary_entries
 
-
   resources :options
 
   resources :categories
