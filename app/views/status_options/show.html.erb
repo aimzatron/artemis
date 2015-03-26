@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @status_option.name %>
+</p>
+
+<p>
+  <strong>Status category:</strong>
+  <%= @status_option.status_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_status_option_path(@status_option) %> |
+<%= link_to 'Back', status_options_path %>

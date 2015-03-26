@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :status_options
+
+  resources :status_catgeories
+
   resources :users
 
   root to: "diary_entries#index"

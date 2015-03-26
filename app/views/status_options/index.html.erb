@@ -1,0 +1,27 @@
+<h1>Listing status_options</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @status_options.each do |status_option| %>
+      <tr>
+        <td><%= status_option.name %></td>
+        <td><%= status_option.status_category_id %></td>
+        <td><%= link_to 'Show', status_option %></td>
+        <td><%= link_to 'Edit', edit_status_option_path(status_option) %></td>
+        <td><%= link_to 'Destroy', status_option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Status option', new_status_option_path %>
