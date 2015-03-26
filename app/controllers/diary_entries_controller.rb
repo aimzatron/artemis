@@ -3,11 +3,10 @@ class DiaryEntriesController < ApplicationController
 
   def index
     if params[:uuid].present?
-      @diary_entry = DiaryEntry.where(uuid: params[:uuid])
+      @diary_entries = DiaryEntry.where(uuid: params[:uuid]).to_a
     else
-      @diary_entry = DiaryEntry.all
+      @diary_entries = DiaryEntry.all
     end
-    render :json => @diary_entry
   end
 
   def show

@@ -32,6 +32,8 @@ gem 'rspec', '3.2'
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'pry-remote'
 end
 
 group :production do
