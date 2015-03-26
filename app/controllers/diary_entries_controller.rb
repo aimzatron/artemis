@@ -2,11 +2,16 @@ class DiaryEntriesController < ApplicationController
   before_action :set_diary_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @diary_entry = DiaryEntry.all
+    if params[:uuid].present?
+      @diary_entry = DiaryEntry.where(uuid: params[:uuid])
+    else
+      @diary_entry = DiaryEntry.all
+    end
     render :json => @diary_entry
   end
 
   def show
+
   end
 
   def new
