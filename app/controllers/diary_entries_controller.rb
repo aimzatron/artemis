@@ -22,6 +22,7 @@ class DiaryEntriesController < ApplicationController
 
   def create
     @diary_entry = DiaryEntry.new(diary_entry_params)
+    @diary_entry.link = "http://www.mayoclinic.org/healthy-living/nutrition-and-healthy-eating/expert-blog/gratitude/bgp-20119738"
 
     respond_to do |format|
       if @diary_entry.save
