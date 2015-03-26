@@ -7,7 +7,7 @@ class DiaryEntriesController < ApplicationController
     else
       @diary_entry = DiaryEntry.all
     end
-    render :json => @diary_entry
+
   end
 
   def show
