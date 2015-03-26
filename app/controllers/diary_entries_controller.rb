@@ -62,6 +62,6 @@ class DiaryEntriesController < ApplicationController
     end
 
     def diary_entry_params
-      params.require(:diary_entry).permit(:entry_text, :uuid)
+      params.require(:diary_entry).permit(:entry_text, :uuid, :status_update)
     end
 end
