@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 
 gem 'rspec', '3.2'
 
+gem 'pry-rails'
+gem 'debugger'
+
 group :development do
   gem 'sqlite3'
 end
