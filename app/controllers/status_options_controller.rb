@@ -1,28 +1,20 @@
 class StatusOptionsController < ApplicationController
   before_action :set_status_option, only: [:show, :edit, :update, :destroy]
 
-  # GET /status_options
-  # GET /status_options.json
   def index
     @status_options = StatusOption.all
   end
 
-  # GET /status_options/1
-  # GET /status_options/1.json
   def show
   end
 
-  # GET /status_options/new
   def new
     @status_option = StatusOption.new
   end
 
-  # GET /status_options/1/edit
   def edit
   end
 
-  # POST /status_options
-  # POST /status_options.json
   def create
     @status_option = StatusOption.new(status_option_params)
 
@@ -37,8 +29,6 @@ class StatusOptionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /status_options/1
-  # PATCH/PUT /status_options/1.json
   def update
     respond_to do |format|
       if @status_option.update(status_option_params)
@@ -51,8 +41,6 @@ class StatusOptionsController < ApplicationController
     end
   end
 
-  # DELETE /status_options/1
-  # DELETE /status_options/1.json
   def destroy
     @status_option.destroy
     respond_to do |format|
@@ -62,12 +50,11 @@ class StatusOptionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_status_option
       @status_option = StatusOption.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def status_option_params
       params.require(:status_option).permit(:name, :status_category_id)
     end
