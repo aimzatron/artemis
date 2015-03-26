@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :status_options
 
-  resources :status_catgeories
+  resources :status_categories
 
   resources :users
 

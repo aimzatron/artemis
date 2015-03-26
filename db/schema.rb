@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20150326180859) do
     t.datetime "updated_at"
   end
 
-  create_table "status_catgeories", force: true do |t|
+  create_table "status_categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

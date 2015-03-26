@@ -1,0 +1,2 @@
+module StatusCategoriesHelper
+end
