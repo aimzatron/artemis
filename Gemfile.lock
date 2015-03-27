@@ -64,6 +64,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     rack (1.5.2)
+    rack-cors (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.6)
@@ -139,6 +140,7 @@ DEPENDENCIES
   pg
   pry
   pry-remote
+  rack-cors
   rails (= 4.1.6)
   rspec (= 3.2)
   sass-rails (~> 4.0.3)
